@@ -1,0 +1,79 @@
+body {
+	margin: 0%;
+	background: #f0f0f0;
+}
+
+#game-container {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	margin: 5vh 5vw;
+	min-width: 90vw;
+	min-height: 90vh;
+	background: #ffffff;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	grid-column: 2;
+	place-self: center;
+	font-size: 5rem;
+}
+
+#player-turn-indicator {
+	grid-column-start: 2;
+	font-size: 3rem;
+	place-self: center;
+}
+
+#board {
+	grid-column: 2;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	place-self: center;
+}
+
+.board__cell {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	font-size: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.board__cell.empty {
+	cursor: pointer;
+}
+
+.board__cell.played {
+	background: #f0f0f0;
+}
+
+.board__cell.empty:hover {
+	background: #f0f0f0;
+}
+
+.board__cell:nth-child(1),
+.board__cell:nth-child(2),
+.board__cell:nth-child(3) {
+	border-top: none;
+}
+
+.board__cell:nth-child(3n + 1) {
+	border-left: none;
+}
+
+.board__cell:nth-child(3n) {
+	border-right: none;
+}
+
+.board__cell:nth-last-child(-n + 3) {
+	border-bottom: none;
+}
+
+#restart-button {
+	place-self: center;
+	grid-column: 2;
+}
