@@ -77,3 +77,47 @@ h1 {
 	place-self: center;
 	grid-column: 2;
 }
+
+@media (max-width: 768px) {
+	#game-container {
+		margin: 2vh 2vw;
+		min-width: 96vw;
+		min-height: 96vh;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	#player-turn-indicator {
+		font-size: 2rem;
+	}
+
+	.board__cell {
+		width: 80px;
+		height: 80px;
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 480px) {
+	#game-container {
+		margin: 1vh 1vw;
+		min-width: 98vw;
+		min-height: 98vh;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	#player-turn-indicator {
+		font-size: 1.5rem;
+	}
+
+	.board__cell {
+		width: 60px;
+		height: 60px;
+		font-size: 2rem;
+	}
+}
